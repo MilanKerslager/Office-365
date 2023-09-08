@@ -1,0 +1,1 @@
+﻿Get-msoluser -all | ft UserPrincipalName, @{L='Licenses Assigned'; E={($_.licenses).Accountskuid}} | Out-File LicenseExport.csv
